@@ -1,0 +1,18 @@
+{
+  "method": "suffix_hll",
+  "structure": "Suffix Array + LCP ; HyperLogLog p=12",
+  "distributed": false,
+  "runtime_sec": 7.2,
+  "n_maximal": 577,
+  "struct_mem_bytes": 10014912,
+  "minsup": 88,
+  "X_pct": 0.5,
+  "per_config": {
+    "1": 343,
+    "3": 35,
+    "5": 0,
+    "10": 0,
+    "20": 0,
+    "40": 0
+  }
+}

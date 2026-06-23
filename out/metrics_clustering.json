@@ -1,0 +1,18 @@
+{
+  "method": "clustering_lsh",
+  "structure": "MinHash-LSH (Jaccard, 4 tables) + neighborhood consensus",
+  "distributed": true,
+  "runtime_sec": 60.8,
+  "n_maximal": 167,
+  "struct_mem_bytes": 564704,
+  "minsup": 88,
+  "X_pct": 0.5,
+  "per_config": {
+    "1": 126,
+    "3": 9,
+    "5": 0,
+    "10": 0,
+    "20": 0,
+    "40": 0
+  }
+}

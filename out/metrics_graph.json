@@ -1,0 +1,18 @@
+{
+  "method": "graph_cms",
+  "structure": "Count-Min Sketch (d=5, w=65536)",
+  "distributed": true,
+  "runtime_sec": 53.5,
+  "n_maximal": 577,
+  "struct_mem_bytes": 2621440,
+  "minsup": 88,
+  "X_pct": 0.5,
+  "per_config": {
+    "1": 343,
+    "3": 35,
+    "5": 0,
+    "10": 0,
+    "20": 0,
+    "40": 0
+  }
+}
