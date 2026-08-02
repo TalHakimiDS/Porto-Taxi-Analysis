@@ -1,9 +1,10 @@
 """
-EDA + formal statistical tests for the advanced preprocessing pipeline output
-(out/trips_advanced_prep_sample.parquet). For every step of the pipeline,
-produces both a visual diagnostic (saved to out/figs/) and a numeric
-statistical test, so claims like "missing not at random" or "log transform
-reduces skew" are backed by a p-value/statistic, not just a plot.
+EDA + formal statistical tests for the stage-1 preprocessing output
+(out/trips_clean_sample.parquet, produced by 01_prep_clean.ipynb). For every
+ML-feature step (missing/outliers/skew/encoding/class-imbalance), produces
+both a visual diagnostic (saved to out/figs/) and a numeric statistical test,
+so claims like "missing not at random" or "log transform reduces skew" are
+backed by a p-value/statistic, not just a plot.
 """
 
 import os
@@ -22,7 +23,7 @@ spark = (SparkSession.builder.appName("porto-taxi-eda").master("local[*]")
          .config("spark.driver.memory", "4g").getOrCreate())
 spark.sparkContext.setLogLevel("WARN")
 
-sdf = spark.read.parquet("out/trips_advanced_prep_sample.parquet")
+sdf = spark.read.parquet("out/trips_clean_sample.parquet")
 cols = [
     "TRIP_ID", "CALL_TYPE", "ORIGIN_CALL", "ORIGIN_STAND", "DAY_TYPE",
     "distance_km", "distance_km_wins", "distance_km_log", "distance_km_sqrt",
